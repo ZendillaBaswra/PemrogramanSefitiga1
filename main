@@ -1,0 +1,42 @@
+import java.io.BufferedReader ;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import static java.lang.Math.sqrt;
+
+
+/**
+ *
+ * @author ZENDILLA
+ */
+public class Main {
+    public static void main(String[] args) {
+        int a,t;
+        double m, kll,luas;
+        
+        BufferedReader segitiga = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("====Masukkan Alas====: ");
+        try{
+            String nilaiA = segitiga.readLine();
+            a = Integer.parseInt(nilaiA);//mengkonversi bilangan string ke int
+            System.out.print("tinggi segitiga: ");
+            String nilaiT = segitiga.readLine();
+            t = Integer.parseInt(nilaiT); 
+            System.out.println(""); 
+            luas = 0.5*a*t;
+            System.out.println("jadi luas segitiga adalah: "+luas);
+            m = sqrt((a*a)+(t*t));//menghitung bilangan
+            kll = a+t+m;
+            System.out.println("Kelilingnya adalah: "+kll);
+                      
+        }catch (IOException e){
+            System.out.println("Error!!");
+        }     
+    }
+}
+run:
+====Masukkan Alas====: 6
+tinggi segitiga: 9
+
+jadi luas segitiga adalah: 27.0
+Kelilingnya adalah: 25.81665382639197
+BUILD SUCCESSFUL (total time: 9 seconds)
